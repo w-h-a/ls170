@@ -57,7 +57,7 @@ Next, according to the TLS protocol, Client _encapsulates_ the HTTP request into
 
 Client has done everything by the TLS book. It is time for Client to dot all the "i"s and cross all the "t"s of the TCP. Client must do this before sending the (encapsulated) HTTP request along the internet highway to Server. Of course, it would make it a more exciting movie if Client or Server broke some protocols, but we're going to have our heroes play by the rules here.
 
-Fundamentally, following the TCP makes it so this movie does not end with a _Max Max_ chase scene on the rough internet highway. The TCP makes the _request/response cycle_ much more orderly and reliable than it would be without it. In any case, wouldn't it be a shame for our heroes not to communicate successfully and reliably after all the preparatory work I mentioned above? We might imagine the movie ending with a grandiose chase sequence, but it is one that Client and Server are prepared to face. Okay, enough stage-setting. Let's get to the climax!
+Fundamentally, following the TCP makes it so this movie does not end with a _Max Max_ chase scene on the rough internet highway. The TCP makes the _request/response cycle_ much more orderly and reliable than it would be without it. In any case, wouldn't it be a shame for our heroes not to communicate successfully and reliably after all the preparatory work I mentioned above? We might imagine the movie ending with a grandiose chase sequence, but it is not one that occurs in a post-apocalyptic wasteland thanks to the TCP. Okay, enough stage-setting. Let's get to the climax!
 
 #### Act III
 
