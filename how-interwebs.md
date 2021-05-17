@@ -1,6 +1,6 @@
 ## RFC: Ideas For A Screenplay
 
-When one first thinks of the internet, one thinks of networks and networks upon networks. In particular, you are probably thinking of your device, in one network, connected to another device, in another network. But, once you start to study the internet, you start to see that it is a _layered communication_ network, where a communication _protocol_ governs each layer. In this piece, I'll try to explain this in a bit more detail.
+When one first thinks of the internet, one thinks of networks and networks upon networks. In particular, you are probably thinking of your device, in one network, connected to another device, in another network. But, once you start to study the internet, you start to see that it is a _layered communication_ network, where each layer is governed by a communication _protocol_. In this piece, I'll try to explain this in a bit more detail.
 
 Let's start by giving those devices we just mentioned some names; let's call one of them "Your Device", and let's say the other one is named "SiteGround's Device". Although these are essential players in our show, they are _hosts_ to the show's stars. Your Device and SiteGround's Device contain the co-stars that we'll know and love by the names "Client" and "Server". These are _applications_ on Your Device and SiteGround's Device, respectively. Client is a web browser. So, if you like, you can mentally give Client another name like "Chrome", but I'll continue to refer to what you are calling "Chrome" as "Client".
 
