@@ -16,6 +16,8 @@ Client processes attempt to communicate with Server processes under the _Transmi
 
 To send the request to synchronize to Server, Client provides the IP address of Server to Your Device and asks Your Device to submit the request along the internet highway. Your Device packages the request up and submits it to a _gateway_ via _Ethernet_ or _Wi-Fi_. A gateway is a server in that strange device behind your TV with the blinking lights. Let's call that extra player "Your Gateway". Cue Hitchcock cameo. Your Gateway sends the _packet_ across the internet---the packet hops from one _router_ to the next. Because `IP address` is stamped on the packet, the packet eventually reaches the gateway ("SiteGround's Gateway") to the network of SiteGround's Device. SiteGround's Gateway encapsulates the packet into a _frame_. The frame contains information on the location of SiteGround's Device within its local network. The frame travels there via _Ethernet_ or _Wi-Fi_. Once the frame reaches SiteGround's Device, it is ripped open in a frenzy by SiteGround's Device and passed along to Server on _port 443_. Server strips off the final packaging to reveal the request to synchronize! How magical!
 
+![The Ask](dev.jpeg)
+
 Let's suppose all goes well. Maybe Server is delighted to serve Client. Maybe Client has something on Server, so Server can't help but do what Client 'asks'. Poor Server! Yeah, let's go with that one. It's dramatic. Whatever the details of this part of the plot, Server eventually responds with its message. This message essentially _acknowledges_ the request and agrees to synchronize. That message is packaged up and sent along that crazy internet highway back to Client. The second part of the three-way handshake is complete. Now for the finale. Client sends a final message that _acknowledges_ Server's willingness to synchronize. At this point, a _connection_ is established between Client and Server. There's a unique communication channel (or _socket_) that begins with the part of the internet highway identified by SiteGround Device's _IP address_ and ends at _port 443_ on SiteGround's Device. Client uses this socket to talk to Server, and Server uses it to listen to Client. There's also a unique _socket_ that begins with the part of the internet highway identified by Your Device's _IP address_ and ends with some _port_ on Your Device. Server uses this socket to talk to Client, and Client uses it to listen to Server. In this way, you can think of a socket identifier as an _IP address_-_port number_ pair.
 
 ![The Players](Notorious-ending.jpeg)
@@ -77,7 +79,7 @@ Server finishes reassembling the segments into a TLS record. Server checks the `
 
 ```text
 HTTP/1.1 200 OK
-date: Mon, 17 May 2021 12:43:52 GMT
+date: Sat, 20 April 1946 07:20:52 GMT
 content-type: text/html; charset=UTF-8
 set-cookie: <cookie value>
 set-cookie: <another cookie value>
